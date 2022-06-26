@@ -1,4 +1,4 @@
-# fxhash-ts-p5
+# fxhash-ts-three
 
 fxhash template for WebPack, TypeScript and three.js.
 Let us be more creative with assistance of TypeScript🎨
