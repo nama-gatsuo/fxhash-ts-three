@@ -83,12 +83,30 @@ class App {
 * `npm run dev` : to start dev server for development
 * `npm run build` : to compile html and bundles into a zip file
 
-## random function
+## Random function
 
 Let's use `rand()` instead of either `Math.random()` or `fxrand()`.  
 `rand()` will return a desirable random value.  
 On the build mode, `fxrand()` will be chosen so the platform can generate unique NFT.  
 On the dev mode, `Math.random()` will be chosen instead so developer can iterate random variations quickly.
+
+## Shader support
+
+You can use file extension of `.frag`, `.vert` and `.glsl` for import. They will be read simply as just string.
+
+```ts
+import postprocessVert from './shaders/passThrough.vert'
+import postprocessFrag from './shaders/postprocess.frag'
+
+const shaderPass = new ShaderPass({
+    uniforms: {
+        'tDiffuse': { value: null }
+    },
+    vertexShader: postprocessVert,
+    fragmentShader: postprocessFrag
+});
+
+```
 
 ## Reference
 

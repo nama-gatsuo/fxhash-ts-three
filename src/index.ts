@@ -38,7 +38,7 @@ class App {
 
     update() {
         requestAnimationFrame(this.update.bind(this));
-        
+
         this.renderer.render(this.scene, this.camera);
     }
 }
