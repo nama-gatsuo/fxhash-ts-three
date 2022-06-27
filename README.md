@@ -68,7 +68,7 @@ class App {
 
         if (msg) msg.innerHTML = 'Generating...';
 
-        // Let's create p5 instance!
+        // Let's create a threejs app!
         new p5(sketch, container);
 
         if (msg) msg.remove();
@@ -87,12 +87,12 @@ class App {
 
 Let's use `rand()` instead of either `Math.random()` or `fxrand()`.  
 `rand()` will return a desirable random value.  
-On the build mode, `fxrand()` will be chosen so the platform can generate unique NFT.  
-On the dev mode, `Math.random()` will be chosen instead so developer can iterate random variations quickly.
+On the build mode, `rand()` will return `fxrand()` value so the platform can generate unique NFT.  
+On the dev mode, `rand()` will return `Math.random()` value so a developer can iterate random variations quickly.
 
 ## Shader support
 
-You can use file extension of `.frag`, `.vert` and `.glsl` for import. They will be read simply as just string.
+You can use file extension of `.frag`, `.vert` and `.glsl` for import. They will be read as just string simply.
 
 ```ts
 import postprocessVert from './shaders/passThrough.vert'

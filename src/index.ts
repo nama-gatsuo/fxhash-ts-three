@@ -33,13 +33,23 @@ class App {
         this.scene = new Scene();
         this.scene.background = new Color('#000000');
 
+        window.addEventListener('resize', this.onResize.bind(this));
+
+        // start animation
         this.update();
     }
 
     update() {
         requestAnimationFrame(this.update.bind(this));
-
         this.renderer.render(this.scene, this.camera);
+    }
+
+    onResize() {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        this.camera.aspect = w / h;
+        this.camera.updateProjectionMatrix();
+        this.renderer.setSize(w, h);
     }
 }
 
