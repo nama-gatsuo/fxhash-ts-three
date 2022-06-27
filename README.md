@@ -110,4 +110,5 @@ const shaderPass = new ShaderPass({
 
 ## Reference
 
-* [MatthieuSegret/fxhash-template](https://github.com/MatthieuSegret/fxhash-template)
+* [fxhash / fxhash-webpack-boilerplate](https://github.com/fxhash/fxhash-webpack-boilerplate)
+* [MatthieuSegret / fxhash-template](https://github.com/MatthieuSegret/fxhash-template)
